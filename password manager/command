@@ -1,0 +1,3 @@
+cd "/Users/sudeep/password manager/"
+g++ main.cpp encryption.cpp database.cpp -o main
+./main

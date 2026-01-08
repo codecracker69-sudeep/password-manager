@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureVault</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="card" id="card">
+    <h1>🔐 SecureVault</h1>
+    <p class="subtitle">Your personal password manager</p>
+
+    <!-- Master Login -->
+    <div id="master-section">
+        <input type="password" id="masterKey" placeholder="Master Password">
+        <button onclick="setMasterKey()">Unlock Vault</button>
+    </div>
+
+    <!-- App -->
+    <div id="app" class="hidden">
+        <h2>Add Credential</h2>
+
+        <input type="text" id="website" placeholder="Website">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="addPassword()">Save</button>
+
+        <input type="text" id="search" placeholder="🔍 Search" onkeyup="searchPassword()">
+
+        <ul id="passwordList"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
